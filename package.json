@@ -5,6 +5,9 @@
     "type": "module",
     "scripts": {
         "start": "node dist/index.js",
+        "pm2:start": "pm2 start dist/index.js --name cropnest-backend",
+        "pm2:restart": "pm2 restart my-backend",
+        "pm2:stop": "pm2 stop my-backend",
         "dev": "nodemon",
         "build": "tsc",
         "ts.check": "tsc --project tsconfig.json",
