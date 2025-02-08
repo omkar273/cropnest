@@ -98,7 +98,7 @@ export const registerAgent = asyncHandler(
         const { name, phone, email } = req.body as IAgent;
 
         const existingAgent = await Agent.findOne({
-            $or: [{ email }, { phone },],
+            $or: [{ email }, { phone }],
         });
 
         if (existingAgent) {

@@ -6,7 +6,12 @@ import { Request, Response } from 'express';
 import { verifyJwt } from './middlewares/index.js';
 import swaggerUi from 'swagger-ui-express';
 
-import { authRouter, fileRouter, policyRouter, userRouter } from './routes/index.js';
+import {
+    authRouter,
+    fileRouter,
+    policyRouter,
+    userRouter,
+} from './routes/index.js';
 import { swaggerDocs } from './swagger.js';
 
 const app = express();

@@ -10,7 +10,10 @@ fileRouter.post('/upload', upload.array('files'), async (req, res) => {
         const files = req.files as Express.Multer.File[];
         const urls = await Promise.all(
             files.map(async (file) => {
-                const res = await uploadFileToCloudinary({ filePath: file.path, folder: 'files' });
+                const res = await uploadFileToCloudinary({
+                    filePath: file.path,
+                    folder: 'files',
+                });
                 return res;
             })
         );
